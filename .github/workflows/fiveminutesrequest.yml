@@ -1,0 +1,14 @@
+name: Make requests
+
+on:
+  schedule:
+    - */5 * * * *
+
+jobs:
+  report_requesting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: made_main_request
+        run: |
+          curl -X POST https://${{secrets.HOST}}/api/five-minute-automation
