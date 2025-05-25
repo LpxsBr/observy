@@ -2,7 +2,7 @@ name: Make requests
 
 on:
   schedule:
-    - */5 * * * *
+    - cron: "*/5 * * * *"
 
 jobs:
   report_requesting:
